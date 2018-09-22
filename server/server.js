@@ -5,11 +5,12 @@ const express = require("express");
 console.log(publicpath);
 console.log(__dirname+"/../public");
 
+var port =  process.env.PORT;
 var app = express();
 app.use(express.static(publicpath));
 
-app.listen(3000,()=>{
-    console.log("Connection is up");
+app.listen(port,()=>{
+    console.log(`connection is up on port ${port}`);
 });
 
 
